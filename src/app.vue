@@ -49,9 +49,9 @@
             document.body.addEventListener("touchmove", function (evt) {
                 evt.preventDefault();
             }, false);
-            setTimeout(() => {
+            Vue.nextTick(() => {
                 this.bindTouch()
-            }, 200)
+            })
         }
     }
 </script>
