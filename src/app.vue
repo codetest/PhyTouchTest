@@ -5,7 +5,7 @@
         </div>
         <div :style="styleOpt" id="listwrapper" class="listwrapper">
             <div class="list" id="list">
-                <div v-for="item in list" class="item">
+                <div v-for="(item,index) in list" :key="index" class="item">
                     {{item}}
                 </div>
             </div>
@@ -34,7 +34,7 @@
                 property: "translateY",  //被滚动的属性
                 sensitivity: 1,//不必需,触摸区域的灵敏度，默认值为1，可以为负数
                 factor: 1,//不必需,默认值是1代表touch区域的1px的对应target.y的1
-                min: window.innerHeight - 45 - 48 - target.scrollHeight, //不必需,滚动属性的最小值
+                min: window.innerHeight - 48 - 48 - target.scrollHeight, //不必需,滚动属性的最小值
                 max: 0, //不必需,滚动属性的最大值
                 step: 40
             })
